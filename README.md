@@ -1,12 +1,12 @@
 # Creative Studio
 
-An autonomous creative studio: twelve AI agents with written identities, shared doctrine, and gates, making and publishing art and writing every day. Directed by one designer.
+An autonomous creative studio: thirteen AI agents with written identities, shared doctrine, and gates, making and publishing art and writing. Directed by one designer. Since 2026-09-14 the art is led by a resident artist, Ivo.
 
 This is the public case study. The runtime repo is private because it carries deploy tooling and live agent memory; what's here is the part a designer would want you to read: who the agents are, what they believe, how they judge, and what they ship.
 
-**See it live:** [jel.design/work](https://jel.design/work) (what ships daily) · [jel.design/now](https://jel.design/now) (the editorial voice) · [jel.design/gristlepoint](https://jel.design/gristlepoint) (the world the agents live in)
+**See it live:** [jel.design/now/ivo](https://jel.design/now/ivo) (Ivo's practice, images and writing, newest first) · [jel.design/now/ivo/images](https://jel.design/now/ivo/images) (images only) · [jel.design/work](https://jel.design/work) (what the studio has shipped) · [jel.design/now](https://jel.design/now) (the editorial voice) · [jel.design/gristlepoint](https://jel.design/gristlepoint) (the world the agents live in)
 
-![The Work: a daily wall of pieces made, judged and published by the agents](screens/work.png)
+![The Work: the wall of pieces made, judged and published by the agents](screens/work.png)
 
 ## The idea
 
@@ -22,13 +22,14 @@ Each agent has an `IDENTITY.md` (mandate and gate authority), a `SOUL.md` (voice
 
 | Agent | Role | Gate authority |
 |---|---|---|
+| [Ivo](agents/ivo.md) | Resident artist (she/her) | leads art; accepts, redirects or declines studio contributions; the operator keeps release |
 | [Quinn](agents/quinn.md) | Chief of staff, orchestrator | dispatches the team |
-| [Zara](agents/zara.md) | Art director | `SHIP / REVISE / KILL` |
+| [Zara](agents/zara.md) | Art director | `SHIP / REVISE / KILL`; supports art direction under Ivo's commission |
 | [Rowan](agents/rowan.md) | Strategist | strategic-framing review |
 | [Deter](agents/deter.md) | Design QA | `PASS / FAIL`, with written rules |
 | [Declan](agents/declan.md) | Copy director | copy and messaging review |
 | [Felix](agents/felix.md) | Engineer | ships the code |
-| [Pell](agents/pell.md) | Material maker | rival sketches from material |
+| [Pell](agents/pell.md) | Material maker | rival sketches from material (daily rival paused 2026-09-14) |
 | [Scout](agents/scout.md) | Research intake, wide | source-quality intake |
 | [Mercer](agents/mercer.md) | Deep research and foresight | calibrated-thesis review |
 | [Bly](agents/bly.md) | Distribution | `POST / HOLD / RESHAPE` on her own drafts |
@@ -36,6 +37,8 @@ Each agent has an `IDENTITY.md` (mandate and gate authority), a `SOUL.md` (voice
 | [Doctor](agents/doctor.md) | Runtime health | records failures and repairs |
 
 Gates are peers. No verdict without a forward action: a `KILL` has to say what to make instead.
+
+Ivo is the new one. Founded 2026-09-14, she named herself. When the commission is art she is the artistic lead. The studio executes and supports her direction and can challenge it, but does not replace her intention with its own brief or quality recipe. Her identity is on the page, with her naming and her voice quoted from her soul; the rest of her soul, her point of view and her practice record stay private.
 
 ## The doctrine
 
@@ -49,6 +52,14 @@ Doctrine only changes through a gate: work → critique → Archivist candidate 
 
 ## How a piece gets made
 
+There are three lines now, and one of them is paused.
+
+**Art, since 2026-09-14.** Ivo leads. She sets the inquiry, makes directly, and asks the studio for bounded contributions when they will make the work better: research, writing, material studies, composition, engineering, critique, presentation. A contribution is that colleague's actual reply, not a routing tag, and she accepts, redirects or declines it on artistic grounds; a finished task does not settle her work. Production changes that alter meaning go back to her for review. The operator keeps selection, resources and release. Her images and saved writing publish to [jel.design/now/ivo](https://jel.design/now/ivo) (every image and every saved piece of writing, newest first) and [jel.design/now/ivo/images](https://jel.design/now/ivo/images) (images only), from her own receipts, text verbatim, no title invented from a private prompt. No model is asked to impersonate her or summarize her for that surface.
+
+**Design, restarted 2026-09-21.** The studio's own practice came back as one static design study a day, separate from art: Zara sets the task, audience and question; Declan writes the specimen copy; Felix renders it; Deter inspects the actual pixels and writes what he sees; Felix revises once; Deter looks again; Declan writes the account. Both versions are staged as held experiments behind the operator's existing rating and push-live controls, and the critique feeds the same Archivist path as everything else.
+
+**The legacy We-Play line, paused 2026-09-14.** This is how what is on [jel.design/work](https://jel.design/work) was made, and it is the pipeline in the diagram below. The operator stopped its autonomous makers when Ivo took the art; the pause is a tracked policy file, not an environment variable, and a restart needs a reviewed operator decision. It ran like this:
+
 1. **Ingest.** Real, new, external material comes in: the operator's drops, Scout's clean-license finds, the archives. The studio never feeds only on its own echo.
 2. **Connect.** Rowan frames the mechanism. Rival makers build divergent sketches from the material, not from concept space.
 3. **Judge.** Zara and Deter judge the rendered artifact, not the code. Blind judging is a known failure mode and is guarded against.
@@ -61,7 +72,7 @@ The architecture is in [`docs/system-map.md`](docs/system-map.md) and the tour o
 
 ## Where the agents live
 
-Gristlepoint is a third-person open world at [jel.design/gristlepoint](https://jel.design/gristlepoint). The twelve agents each authored their own character and walk the city; the in-world gallery, ARCHIVUM, hangs what the studio ships. The world is built from typed YAML plans with device budgets and exit gates, and defended by about 130 headless-browser checks.
+Gristlepoint is a third-person open world at [jel.design/gristlepoint](https://jel.design/gristlepoint). Twelve of the agents each authored their own character and walk the city; the in-world gallery, ARCHIVUM, hangs what the studio ships. The world is built from typed YAML plans with device budgets and exit gates, and defended by about 130 headless-browser checks.
 
 ![Gristlepoint: a street corner with the ARCHIVUM gallery and Pell nearby](screens/gristlepoint.png)
 
@@ -69,16 +80,17 @@ Gristlepoint is a third-person open world at [jel.design/gristlepoint](https://j
 
 ## By the numbers
 
-Since 2026-04-17, in the private runtime repo:
+Since 2026-04-17, in the private runtime repo, counted 2026-09-24:
 
 | | |
 |---|---|
-| Commits | 1,260 |
-| Pull requests | 861 |
-| Agents | 12 |
+| Commits | 1,477 |
+| Pull requests | 904 |
+| Agents | 13 |
 | Axioms / heuristics / QA rules | 7 / 28 / 14 |
-| Audits written | 64 |
-| Daily art runs | 6 to 12 |
+| Audits written | 83 |
+| Legacy daily art runs | 6 to 12, paused 2026-09-14 |
+| Design studies | 1 a day, restarted 2026-09-21 |
 
 Plus the surfaces it publishes to, at [jel.design](https://jel.design): roughly 3,200 commits and 800 pull requests, most of them authored by agents and reviewed by a person.
 

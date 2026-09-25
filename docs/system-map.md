@@ -29,9 +29,20 @@ The legal loop is work → critique → Archivist candidate → operator decisio
 
 ## Runtime Direction
 
+- Ivo leads art commissions and accepts Studio contributions. The legacy art
+  makers are paused by `studio/config/art-ownership.json` (operator decision,
+  2026-09-14); Ivo's on-demand tools and the Studio's design work remain
+  available. Missing or invalid policy fails closed; environment variables and
+  old trigger files cannot override it.
+- The Studio's own practice is a separate daily design study
+  (`studio/scripts/design-study.ts`, policy `studio/config/design-practice.json`):
+  Zara brief → Declan copy → Felix render → Deter pixel critique → one Felix
+  revision → Deter critique → Declan account. Versions stage as held experiments
+  behind the existing rating and push-live controls.
 - Quinn is the conversational and orchestration front door.
 - Scout intakes external signals; Mercer researches; Rowan frames mechanism and strategy.
-- Zara and Declan direct Artwork and Writing; makers join early for feasibility but do not choose thesis or theory.
+- Zara supports art direction under Ivo's commission; Declan directs Writing.
+  Makers join early for feasibility without silently replacing the inquiry.
 - Deter enforces craft and repairs execution failures.
 - Archivist synthesizes recurring evidence into gated candidates.
 - Doctor records operational failures and repair signals.
@@ -42,7 +53,13 @@ Runtime architecture: `docs/plans/2026-04-23-studio-agent-runtime-plan.md`.
 
 - Dashboard: operator control room and version/evidence memory.
 - Quinn: conversational control plane.
-- Artwork: canonical creative track; `/we-play` remains its public alias.
+- Artwork: canonical creative track; `/we-play` remains its public alias. Its
+  legacy autonomous production is paused; art is Ivo's.
+- Ivo's public stream: `jel.design/now/ivo` (images and exact saved writing,
+  newest first) and `jel.design/now/ivo/images`. Policy is
+  `studio/config/ivo-public-stream.json`; only her own image and saved-writing
+  receipts are eligible, the reader fetches one fixed public manifest and never
+  calls private Studio endpoints.
 - Writing: canonical editorial track; `/now/editorial` remains its public alias.
 - Praxis: internal evidence spine; currently read-only foundation instrumentation.
 - `jel.design`: public performance surface.

@@ -19,7 +19,8 @@ studio-brain/
 │       ├── WORKING_MEMORY.md          VM-owned KEEP/AVOID/TEST/RECALL; absent locally
 │       ├── SELF_IMPROVEMENT_LOOP.md   durable learning protocol (all agents)
 │       ├── Frameworks Index.md        (Rowan)
-│       └── Signal Library.md          (Rowan)
+│       ├── Signal Library.md          (Rowan)
+│       └── PRACTICE.md                (Ivo: studies, collaboration, project records)
 │
 ├── doctrine/                          shared rules everyone reads
 │   ├── axioms/                        non-negotiable principles
@@ -30,11 +31,13 @@ studio-brain/
 │   │   ├── README.md                  index + soft↔hard lifecycle
 │   │   ├── ENFORCEMENT.md             how to enforce (3-layer model, gaps)
 │   │   └── escalation-log.md          hard-failure log + pattern detection
-│   ├── pov/                           per-agent live worldview
+│   ├── pov/                           per-agent live worldview, one per agent
 │   │   ├── quinn-pov.md
 │   │   ├── deter-pov.md
 │   │   ├── zara-pov.md
-│   │   └── rowan-pov.md
+│   │   ├── rowan-pov.md
+│   │   ├── ivo-pov.md                 founding positions, provisional
+│   │   └── ...                        (every canonical agent has one)
 │   ├── candidates/                    Archivist-proposed doctrine changes
 │   └── rejected/                      doctrine changes the operator rejected
 │
@@ -116,3 +119,9 @@ runtime receipt. CI runs this on every relevant PR.
   SELF_IMPROVEMENT_LOOPs, decisions, templates, and fixed 11 persona-loading
   code paths. See `MIGRATION_MAP.md` "Audit + recovery" section + the
   one-time apology at `identity/_operator-note-2026-05-13.md`.
+- 2026-09-14: Ivo founded as resident artist (`identity/ivo/`, with a
+  `PRACTICE.md` alongside the usual files, and `doctrine/pov/ivo-pov.md`). Her
+  identity and POV load through the same fail-closed loaders, with a
+  deliberately scoped context: no inherited commercial reference recipes. The
+  monthly POV job excludes her, and her POV changes only through the
+  critique → candidate → operator path. Legacy art makers paused the same day.
