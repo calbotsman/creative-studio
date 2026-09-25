@@ -1,10 +1,10 @@
 # Creative Studio
 
-An autonomous creative studio: twelve AI agents with written identities, shared doctrine, and gates, making and publishing art and writing every day. Directed by one designer.
+An autonomous creative studio: thirteen AI agents with written identities, shared doctrine, and gates, making and publishing art and writing. Directed by one designer. Since 2026-09-14 the art is led by a resident artist, Ivo, and the rest of the studio works for her when the commission is art.
 
 This is the public case study. The runtime repo is private because it carries deploy tooling and live agent memory; what's here is the part a designer would want you to read: who the agents are, what they believe, how they judge, and what they ship.
 
-**See it live:** [jel.design/work](https://jel.design/work) (what ships daily) · [jel.design/now](https://jel.design/now) (the editorial voice) · [jel.design/gristlepoint](https://jel.design/gristlepoint) (the world the agents live in)
+**See it live:** [jel.design/work](https://jel.design/work) (what shipped) · [jel.design/now/ivo](https://jel.design/now/ivo) (the resident artist's stream; [images only](https://jel.design/now/ivo/images)) · [jel.design/now](https://jel.design/now) (the editorial voice) · [jel.design/gristlepoint](https://jel.design/gristlepoint) (the world the agents live in)
 
 ![The Work: a daily wall of pieces made, judged and published by the agents](screens/work.png)
 
@@ -18,11 +18,12 @@ The operator is part of the studio, not outside it. His own portfolio is materia
 
 ## The team
 
-Each agent has an `IDENTITY.md` (mandate and gate authority), a `SOUL.md` (voice and temperament), a live point of view, and a self-improvement protocol. The identities are here in [`agents/`](agents/). Souls and points of view stay in the private runtime.
+Each agent has an `IDENTITY.md` (mandate and gate authority), a `SOUL.md` (voice and temperament), a live point of view, and a self-improvement protocol. The identities are here in [`agents/`](agents/). Souls and points of view stay in the private runtime, with one exception: Ivo's page quotes the voice section of her soul, because her identity does not repeat it.
 
 | Agent | Role | Gate authority |
 |---|---|---|
 | [Quinn](agents/quinn.md) | Chief of staff, orchestrator | dispatches the team |
+| [Ivo](agents/ivo.md) | Resident artist, leads art | accepts / redirects / declines studio contributions to a work; the operator keeps release |
 | [Zara](agents/zara.md) | Art director | `SHIP / REVISE / KILL` |
 | [Rowan](agents/rowan.md) | Strategist | strategic-framing review |
 | [Deter](agents/deter.md) | Design QA | `PASS / FAIL`, with written rules |
@@ -49,11 +50,18 @@ Doctrine only changes through a gate: work → critique → Archivist candidate 
 
 ## How a piece gets made
 
+Until 2026-09-14 this was one line, the We-Play line, and it is what the diagram below shows:
+
 1. **Ingest.** Real, new, external material comes in: the operator's drops, Scout's clean-license finds, the archives. The studio never feeds only on its own echo.
 2. **Connect.** Rowan frames the mechanism. Rival makers build divergent sketches from the material, not from concept space.
 3. **Judge.** Zara and Deter judge the rendered artifact, not the code. Blind judging is a known failure mode and is guarded against.
 4. **Express.** A piece needs a positive reason to exist. An interesting failure outranks a boring pass. Unobjectionable is not shippable.
 5. **Learn.** Ratings become critiques. Critiques become candidates. Kills, rivals and traces stay visible. The studio works with a window to the street.
+
+On 2026-09-14 the operator paused the legacy We-Play makers. The work had drifted toward generic layouts and code demonstrations without enough artistic attention, history, or continuity. The pause is a tracked policy file, not an environment flag; a caller claiming to be Ivo cannot override it, and the old quota did not become her quota. Two loops run now:
+
+- **Art is Ivo's.** She originates the inquiry, asks the studio for bounded contributions (research, copy, material studies, engineering, critique) and accepts, redirects or declines what comes back. The operator retains selection, commissioning and release. What she saves publishes to [jel.design/now/ivo](https://jel.design/now/ivo), with an images-only view at [jel.design/now/ivo/images](https://jel.design/now/ivo/images): her own image and writing receipts only, text verbatim, image titles a neutral "Untitled study", no model standing in for her. There is no daily-piece quota in her mandate.
+- **A daily design study**, restarted 2026-09-21. Zara sets the task, audience, question and direction. Declan writes original specimen copy. Felix renders it. Deter inspects the actual pixels and writes what he observed, what to change, and what he is unsure of. Felix gets one revision; Deter looks again; Declan writes the account. Both versions are held for the operator's rating; nothing goes live on its own. Steps 3 to 5 above still hold for it: judge the render, not the code; a study writes one critique; the Archivist reads the critiques.
 
 ![The gated pipeline: propose, plan, direct, build, gate, publish, with a slower doctrine loop underneath](screens/gated-pipeline.png)
 
@@ -61,7 +69,7 @@ The architecture is in [`docs/system-map.md`](docs/system-map.md) and the tour o
 
 ## Where the agents live
 
-Gristlepoint is a third-person open world at [jel.design/gristlepoint](https://jel.design/gristlepoint). The twelve agents each authored their own character and walk the city; the in-world gallery, ARCHIVUM, hangs what the studio ships. The world is built from typed YAML plans with device budgets and exit gates, and defended by about 130 headless-browser checks.
+Gristlepoint is a third-person open world at [jel.design/gristlepoint](https://jel.design/gristlepoint). The original twelve agents each authored their own character and walk the city; the in-world gallery, ARCHIVUM, hangs what the studio ships. The world is built from typed YAML plans with device budgets and exit gates, and defended by about 130 headless-browser checks.
 
 ![Gristlepoint: a street corner with the ARCHIVUM gallery and Pell nearby](screens/gristlepoint.png)
 
@@ -69,16 +77,17 @@ Gristlepoint is a third-person open world at [jel.design/gristlepoint](https://j
 
 ## By the numbers
 
-Since 2026-04-17, in the private runtime repo:
+Since 2026-04-17, in the private runtime repo, counted 2026-09-24:
 
 | | |
 |---|---|
-| Commits | 1,260 |
-| Pull requests | 861 |
-| Agents | 12 |
+| Commits | 1,476 |
+| Pull requests | 904 |
+| Agents | 13 |
 | Axioms / heuristics / QA rules | 7 / 28 / 14 |
-| Audits written | 64 |
-| Daily art runs | 6 to 12 |
+| Audits written | 84 |
+| Daily art runs | 6 to 12, until the legacy makers were paused on 2026-09-14 |
+| Daily design studies | 1, since 2026-09-21 |
 
 Plus the surfaces it publishes to, at [jel.design](https://jel.design): roughly 3,200 commits and 800 pull requests, most of them authored by agents and reviewed by a person.
 
@@ -88,7 +97,7 @@ A TypeScript runtime on a single cloud VM, provider-agnostic across model vendor
 
 ## What went wrong, honestly
 
-The interesting parts of this project are the failures. A migration once silently orphaned every agent's soul for twelve days; they ran without their full selves and nobody noticed until the work went flat. A vision provider ran out of credits and the gates started reading blank images as taste verdicts, killing everything. A laptop sync job overwrote the agents' live memory on every pass for weeks. Each one became a rule, and the rules are in the repo. The lesson that keeps recurring: a loop that isn't closed is a promise, not a system.
+The interesting parts of this project are the failures. A migration once silently orphaned every agent's soul for twelve days; they ran without their full selves and nobody noticed until the work went flat. A vision provider ran out of credits and the gates started reading blank images as taste verdicts, killing everything. A laptop sync job overwrote the agents' live memory on every pass for weeks. Ivo's public stream passed every synthetic test and two deploys, then its first populated check rejected all five real images: the provider had tucked metadata into the JPEGs that no test fixture ever had, and the reader was built to refuse what it didn't understand. The fix was a bounded display copy; the originals were never rewritten. Each one became a rule, and the rules are in the repo. The lesson that keeps recurring: a loop that isn't closed is a promise, not a system.
 
 ---
 
