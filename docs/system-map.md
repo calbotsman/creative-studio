@@ -31,7 +31,18 @@ The legal loop is work → critique → Archivist candidate → operator decisio
 
 - Quinn is the conversational and orchestration front door.
 - Scout intakes external signals; Mercer researches; Rowan frames mechanism and strategy.
-- Zara and Declan direct Artwork and Writing; makers join early for feasibility but do not choose thesis or theory.
+- Ivo leads art commissions and accepts Studio contributions. The legacy art
+  makers are paused by `studio/config/art-ownership.json`; Ivo's on-demand tools
+  and the Studio's design work remain available. Her private autonomous practice
+  uses native opportunity checks, reviewed limits in `studio/config/ivo-practice.json`,
+  and an explicit authenticated practice activation; missing control is paused.
+- Zara supports art direction under Ivo's commission; Declan directs Writing.
+  Makers join early for feasibility without silently replacing the inquiry.
+- A daily static design study (`studio/scripts/design-study.ts`, policy
+  `studio/config/design-practice.json`) runs Zara brief → Declan copy → Felix
+  render → Deter pixel critique → one Felix revision → Deter critique → Declan
+  account. Both versions are held for the operator's existing rating and
+  publish controls; the loop does not restart paused art production.
 - Deter enforces craft and repairs execution failures.
 - Archivist synthesizes recurring evidence into gated candidates.
 - Doctor records operational failures and repair signals.
@@ -42,7 +53,8 @@ Runtime architecture: `docs/plans/2026-04-23-studio-agent-runtime-plan.md`.
 
 - Dashboard: operator control room and version/evidence memory.
 - Quinn: conversational control plane.
-- Artwork: canonical creative track; `/we-play` remains its public alias.
+- Artwork: canonical creative track; `/we-play` remains its public alias. Its legacy makers are paused since 2026-09-14.
+- Ivo's stream: `jel.design/now/ivo` (reading view) and `/now/ivo/images` (images only). The reader fetches a fixed public manifest built only from her own image and writing receipts under `studio/config/ivo-public-stream.json`; it never calls private Studio endpoints.
 - Writing: canonical editorial track; `/now/editorial` remains its public alias.
 - Praxis: internal evidence spine; currently read-only foundation instrumentation.
 - `jel.design`: public performance surface.

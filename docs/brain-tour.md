@@ -18,6 +18,8 @@ studio-brain/
 │       ├── SOUL.md                    voice + temperament + Truth Discipline
 │       ├── WORKING_MEMORY.md          VM-owned KEEP/AVOID/TEST/RECALL; absent locally
 │       ├── SELF_IMPROVEMENT_LOOP.md   durable learning protocol (all agents)
+│       ├── PRACTICE.md                (Ivo) inspectable studies, collaboration,
+│       │                              recoverable project records
 │       ├── Frameworks Index.md        (Rowan)
 │       └── Signal Library.md          (Rowan)
 │
@@ -30,11 +32,13 @@ studio-brain/
 │   │   ├── README.md                  index + soft↔hard lifecycle
 │   │   ├── ENFORCEMENT.md             how to enforce (3-layer model, gaps)
 │   │   └── escalation-log.md          hard-failure log + pattern detection
-│   ├── pov/                           per-agent live worldview
+│   ├── pov/                           per-agent live worldview, one file per
+│   │   │                              agent, all thirteen
 │   │   ├── quinn-pov.md
-│   │   ├── deter-pov.md
 │   │   ├── zara-pov.md
-│   │   └── rowan-pov.md
+│   │   ├── ...
+│   │   └── ivo-pov.md                 founding claims, labeled provisional
+│   │                                  (2026-09-14)
 │   ├── candidates/                    Archivist-proposed doctrine changes
 │   └── rejected/                      doctrine changes the operator rejected
 │
@@ -52,6 +56,8 @@ studio-brain/
 │   │                                  Decision Feed, ZARA_FEED, sync logs)
 │   ├── sessions/                      session transcripts (gitignored)
 │   ├── doctor_log/                    heartbeats (gitignored)
+│   ├── design-studies/<date>/         daily design-study records, SVG + PNG
+│   │                                  renders, critiques (VM-owned, gitignored)
 │   └── dreams/                        consolidated dreams
 │
 ├── routing/                           how agents are dispatched
@@ -116,3 +122,14 @@ runtime receipt. CI runs this on every relevant PR.
   SELF_IMPROVEMENT_LOOPs, decisions, templates, and fixed 11 persona-loading
   code paths. See `MIGRATION_MAP.md` "Audit + recovery" section + the
   one-time apology at `identity/_operator-note-2026-05-13.md`.
+- 2026-09-14: Ivo founded as resident artist (`identity/ivo/`, `pov/ivo-pov.md`),
+  self-named in a workshop instance. The same day the operator paused the legacy
+  autonomous art makers via `studio/config/art-ownership.json`; Ivo leads art and
+  the studio contributes on her direction. Her working memory, journal and
+  feedback are excluded from the automatic dream synthesis.
+- 2026-09-16: Ivo's public stream policy (`studio/config/ivo-public-stream.json`)
+  publishes only her own image and writing receipts to `jel.design/now/ivo`.
+- 2026-09-21: daily design study restarted (decided 2026-09-17, merged
+  2026-09-20). Records land in `memory/design-studies/`; each study writes one
+  critique to `memory/critiques/` for the Archivist. Doctrine, identity and
+  working memory are never written by the loop.
